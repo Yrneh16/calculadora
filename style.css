@@ -1,78 +1,105 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    height:100vh;
-
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #e50404 0%, #990000 100%);
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.calculadora{
-
-    background:white;
-    padding:30px;
-
-    width:350px;
-
-    border-radius:10px;
-
-    box-shadow:0px 0px 10px rgba(0,0,0,.2);
-
+.calculadora {
+    background: #ffffff;
+    padding: 32px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
-h1{
-
-    text-align:center;
-    margin-bottom:20px;
-
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    color: #1a1a1a;
 }
 
-label{
-
-    display:block;
-    margin-top:15px;
-
+label {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555555;
 }
 
-input{
-
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.botoes{
-
-    display:flex;
-    justify-content:space-between;
-
-    margin-top:20px;
-
+input:focus {
+    outline: none;
+    border-color: #e50404;
+    box-shadow: 0 0 0 3px rgba(229, 4, 4, 0.15);
 }
 
-button{
-
-    width:48%;
-    padding:10px;
-
-    cursor:pointer;
-
+.botoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
 }
 
-#resultado{
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #e50404;
+    color: #ffffff;
+    transition: background-color 0.2s, transform 0.1s;
+}
 
-    margin-top:25px;
-    text-align:center;
+button:hover {
+    background-color: #c20303;
+}
 
+button:active {
+    transform: scale(0.98);
+}
+
+/* Estilo opcional caso o segundo botão seja "Limpar" */
+button:nth-child(2) {
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+button:nth-child(2):hover {
+    background-color: #e0e0e0;
+}
+
+#resultado {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    min-height: 54px;
 }
